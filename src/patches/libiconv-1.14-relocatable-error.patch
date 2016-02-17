@@ -1,0 +1,20 @@
+--- a/srclib/Makefile.in	2013-09-20 14:39:53 +0000
++++ b/srclib/Makefile.in	2013-09-20 14:42:04 +0000
+@@ -115,7 +115,7 @@
+ am__objects_1 =  \
+ 	width.$(OBJEXT)
+ am_libicrt_a_OBJECTS = allocator.$(OBJEXT) areadlink.$(OBJEXT) \
+-	careadlinkat.$(OBJEXT) malloca.$(OBJEXT) progname.$(OBJEXT) \
++	relocatable.o careadlinkat.$(OBJEXT) malloca.$(OBJEXT) progname.$(OBJEXT) \
+ 	safe-read.$(OBJEXT) $(am__objects_1) xmalloc.$(OBJEXT) \
+ 	xstrdup.$(OBJEXT) xreadlink.$(OBJEXT)
+ libicrt_a_OBJECTS = $(am_libicrt_a_OBJECTS)
+@@ -818,7 +818,7 @@
+ # present in all Makefile.am that need it. This is ensured by the applicability
+ # 'all' defined above.
+ BUILT_SOURCES = $(ALLOCA_H) $(ERRNO_H) fcntl.h signal.h arg-nonnull.h \
+-	c++defs.h warn-on-use.h $(STDBOOL_H) $(STDDEF_H) $(STDINT_H) \
++	c++defs.h relocatable.h warn-on-use.h $(STDBOOL_H) $(STDDEF_H) $(STDINT_H) \
+ 	stdio.h stdlib.h string.h sys/stat.h time.h unistd.h \
+ 	$(LIBUNISTRING_UNITYPES_H) $(LIBUNISTRING_UNIWIDTH_H)
+ MOSTLYCLEANFILES = core *.stackdump core *.stackdump alloca.h \
